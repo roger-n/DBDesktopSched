@@ -16,41 +16,48 @@ public class DBController {
         session.beginTransaction();
     }
 
-    public void listEmployees() {
-        List<?> employees = session.createQuery("FROM Employee").getResultList();
-        employees.forEach(l -> System.out.println(l.toString()));
+    public ScheduleEvent getScheduleEvent(int id) {
+        return session.find(ScheduleEvent.class, id);
     }
 
-    public List findEmployeesWithFirstName(String firstName) {
-        return session.createQuery("FROM Employee WHERE firstName = '" + firstName + "'").getResultList();
+    public void listScheduleEvents() {
+        List<?> scheduleEvents = session.createQuery("FROM ScheduleEvent").getResultList();
+        scheduleEvents.forEach(l -> System.out.println(l.toString()));
     }
 
-    public void updateEmployee(Integer id, Employee employee) {
-        Employee e = session.find(Employee.class, id);
-        e.setFirstName(employee.getFirstName());
-        e.setLastName(employee.getLastName());
-        e.setSalery(employee.getSalery());
+    public List findClassWithName(String className) {
+        return session.createQuery("FROM ScheduleEvent WHERE className = '" + className + "'").getResultList();
+    }
+
+    public void updateScheduleEvent(Integer id, ScheduleEvent scheduleEvent) {
+        ScheduleEvent e = session.find(ScheduleEvent.class, id);
+        e.setClassName(scheduleEvent.getClassName());
+        e.setClassStartTime(scheduleEvent.getClassStartTime());
+        e.setClassEndTime(scheduleEvent.getClassEndTime());
+        e.setClassDays(scheduleEvent.getClassDays());
+        e.setClassRoom(scheduleEvent.getClassRoom());
+        e.setClassLecture(scheduleEvent.getClassLecture());
         session.update(e);
         commit();
     }
 
-    public void deleteEmployee(Integer id) {
-        Employee e = session.find(Employee.class, id);
+    public void deleteScheduleEvent(Integer id) {
+        ScheduleEvent e = session.find(ScheduleEvent.class, id);
         session.delete(e);
         commit();
     }
 
-    public void deleteEmployees(Integer... ids) {
-        Arrays.asList(ids).forEach(this::deleteEmployee);
+    public void deleteScheduleEvents(Integer... ids) {
+        Arrays.asList(ids).forEach(this::deleteScheduleEvent);
     }
 
-    public void saveEmployee(Employee employee){
-        session.save(employee);
+    public void saveScheduleEvent(ScheduleEvent scheduleEvent){
+        session.save(scheduleEvent);
         commit();
     }
 
-    public void saveEmployees(Employee... employees){
-        Arrays.asList(employees).forEach(this::saveEmployee);
+    public void saveScheduleEvents(ScheduleEvent... scheduleEvents){
+        Arrays.asList(scheduleEvents).forEach(this::saveScheduleEvent);
     }
 
     private void commit() {

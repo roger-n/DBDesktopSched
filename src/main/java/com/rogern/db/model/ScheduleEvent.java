@@ -20,6 +20,9 @@ public class ScheduleEvent {
     private String classRoom;
     private boolean lecture;
 
+    public ScheduleEvent() {
+    }
+
     public ScheduleEvent(String className,
                          LocalTime classStartTime,
                          LocalTime classEndTime,
@@ -88,11 +91,11 @@ public class ScheduleEvent {
         this.classRoom = classRoom;
     }
 
-    public boolean getLecture() {
+    public boolean getClassLecture() {
         return lecture;
     }
 
-    public void setLecture(boolean lecture) {
+    public void setClassLecture(boolean lecture) {
         this.lecture = lecture;
     }
 
