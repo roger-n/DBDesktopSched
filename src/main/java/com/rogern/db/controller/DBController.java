@@ -2,6 +2,7 @@ package com.rogern.db.controller;
 
 import com.rogern.db.model.Employee;
 import com.rogern.db.util.HibernateUtil;
+import com.rogern.db.model.ScheduleEvent;
 import org.hibernate.Session;
 
 import java.util.Arrays;
