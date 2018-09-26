@@ -1,4 +1,4 @@
-package com.rogern.db;
+package com.rogern.ui;
 
 import com.rogern.db.controller.DBController;
 import com.rogern.db.model.ScheduleEvent;
