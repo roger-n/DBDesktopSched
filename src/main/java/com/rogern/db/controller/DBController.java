@@ -1,6 +1,5 @@
 package com.rogern.db.controller;
 
-import com.rogern.db.model.Employee;
 import com.rogern.db.util.HibernateUtil;
 import com.rogern.db.model.ScheduleEvent;
 import org.hibernate.Session;
@@ -25,7 +24,7 @@ public class DBController {
         scheduleEvents.forEach(l -> System.out.println(l.toString()));
     }
 
-    public List findClassWithName(String className) {
+    public List findScheduleEventWithName(String className) {
         return session.createQuery("FROM ScheduleEvent WHERE className = '" + className + "'").getResultList();
     }
 

@@ -13,7 +13,6 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="show_sql">false</property>
         <mapping class="com.rogern.db.model.Person"/>
-        <mapping class="com.rogern.db.model.Employee"/>
         <mapping class="com.rogern.db.model.ScheduleEvent"/>
     </session-factory>
 </hibernate-configuration>

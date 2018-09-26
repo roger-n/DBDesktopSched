@@ -1,7 +1,6 @@
 package com.rogern.db;
 
 import com.rogern.db.controller.DBController;
-import com.rogern.db.model.Employee;
 import com.rogern.db.model.ScheduleEvent;
 
 import java.time.LocalTime;
@@ -11,7 +10,7 @@ public class App {
     public static void main(String[] args) {
         DBController controller = new DBController();
 
-        /*Save a new Employee*/
+        /*Save a new ScheduleEvent*/
         ScheduleEvent scheduleEvent = new ScheduleEvent("Class1",
                 LocalTime.parse("06:00"),
                 LocalTime.parse("06:50"),
@@ -21,26 +20,26 @@ public class App {
                 true);
         controller.saveScheduleEvent(scheduleEvent);
 
-        /*Gets all Employees*/
+        /*Gets all ScheduleEvents*/
         controller.listScheduleEvents();
 
         System.out.println();
-        /*Updates Employee*/
-//        Employee updated = new Employee("Roger", "Nhan", 42069);
-//        controller.updateEmployee(1, updated);
+        /*Updates ScheduleEvent*/
+//        ScheduleEvent updated = new ScheduleEvent(------------);
+//        controller.updateScheduleEvent(1, updated);
 
-        /*Deletes Employee/Employees from DB*/
-//        controller.deleteEmployees(2, 34,35, 67);
+        /*Deletes ScheduleEvent(s) from DB*/
+//        controller.deleteScheduleEvent(2, 34,35, 67);
 //        controller.commit();
 
-        /*findEmployeeWithFirstName example*/
-        List<?> results = controller.findClassWithName("Class1");
+        /*findScheduleEventWithClassName example*/
+        List<?> results = controller.findScheduleEventWithName("Class1");
         results.forEach(System.out::println);
 
         System.out.println();
         controller.listScheduleEvents();
-//        Employee employee = session.find(Employee.class, 1);
-//        System.out.println(employee);
+//        ScheduleEvent scheduleEvent = session.find(ScheduleEvent.class, 1);
+//        System.out.println(scheduleEvent);
 
         controller.close();
     }
