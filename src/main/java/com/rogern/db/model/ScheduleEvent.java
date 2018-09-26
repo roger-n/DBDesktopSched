@@ -18,7 +18,7 @@ public class ScheduleEvent {
     private String classDays;
     private String classInstructor;
     private String classRoom;
-    private boolean lecture;
+    private boolean classLecture;
 
     public ScheduleEvent() {
     }
@@ -29,14 +29,14 @@ public class ScheduleEvent {
                          String classDays,
                          String classInstructor,
                          String classRoom,
-                         boolean lecture) {
+                         boolean classLecture) {
         this.className = className;
         this.classStartTime = classStartTime;
         this.classEndTime = classEndTime;
         this.classDays = classDays;
         this.classInstructor = classInstructor;
         this.classRoom = classRoom;
-        this.lecture = lecture;
+        this.classLecture = classLecture;
     }
 
     public int getClassID(){
@@ -92,11 +92,11 @@ public class ScheduleEvent {
     }
 
     public boolean getClassLecture() {
-        return lecture;
+        return classLecture;
     }
 
-    public void setClassLecture(boolean lecture) {
-        this.lecture = lecture;
+    public void setClassLecture(boolean classLecture) {
+        this.classLecture = classLecture;
     }
 
     @Override
@@ -108,7 +108,7 @@ public class ScheduleEvent {
                 " classDays: " + classDays +
                 " classInstructor: " + classInstructor +
                 " classRoom: " + classRoom +
-                " lecture; " + lecture;
+                " lecture; " + classLecture;
     }
 }
 
@@ -119,5 +119,5 @@ public class ScheduleEvent {
  String classDays,
  String classInstructor,
  String classRoom,
- boolean lecture
+ boolean classLecture
  **/

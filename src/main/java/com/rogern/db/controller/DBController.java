@@ -24,6 +24,10 @@ public class DBController {
         scheduleEvents.forEach(l -> System.out.println(l.toString()));
     }
 
+    public List<?> getScheduleEvents(){
+        return session.createQuery("FROM ScheduleEvent").getResultList();
+    }
+
     public List findScheduleEventWithName(String className) {
         return session.createQuery("FROM ScheduleEvent WHERE className = '" + className + "'").getResultList();
     }
