@@ -49,7 +49,6 @@ public class Test extends JFrame {
         //Making instance of DBController
         controller = new DBController();
 
-        //TODO: Add this
         schedPanel = new SchedPanel(controller);
 
         //Format:
@@ -86,7 +85,7 @@ public class Test extends JFrame {
         top_level_panel.setLayout(new GridLayout(1,1));
         add(top_level_panel);
         //Set default view to mySchedules
-        switchToSchedule();
+        //switchToSchedule();
         refreshComponent(this);
 
         setVisible(true);

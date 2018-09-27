@@ -97,10 +97,10 @@ public class MainWindow extends JFrame {
     //ALTERNATING BETWEEN DIFFERENT ACTIVITIES
 
     public void switchToSchedule(){
+        //CLEAR TOP_LEVEL_PANEL AND UPDATE WITH SCHEDPANEL
         top_level_panel.removeAll();
         schedPanel = new SchedPanel(controller);
         top_level_panel.add(schedPanel);
-        //TODO: create and set up todayPanel
         refreshComponent(top_level_panel);
     }
 

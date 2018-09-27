@@ -1,11 +1,9 @@
 package com.rogern.ui;
 
-import com.rogern.db.controller.DBController;
 import com.rogern.db.model.ScheduleEvent;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.List;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 
@@ -59,6 +57,11 @@ public class SchedElementPanel extends JPanel{
         //Get list of all ScheduleEvents
         scheduleEvent = e;
 
+        setupSchedElementPanel();
+
+    }
+
+    public void setupSchedElementPanel() {
         className = scheduleEvent.getClassName();
         classStartTime = scheduleEvent.getClassStartTime();
         classEndTime = scheduleEvent.getClassEndTime();
@@ -75,67 +78,62 @@ public class SchedElementPanel extends JPanel{
 
         //Create and set fonts for JLabels
         classNameLabel = new JLabel(className);
-            classNameLabel.setFont(headFont);
+        classNameLabel.setFont(headFont);
         timeLabel = new JLabel("" + classStartTime.truncatedTo(ChronoUnit.MINUTES) + " - " + classEndTime.truncatedTo(ChronoUnit.MINUTES));
-            timeLabel.setFont(bodyFont);
+        timeLabel.setFont(bodyFont);
 
         instructorLabel = new JLabel(classInstructor);
-            instructorLabel.setFont(bodyFont);
+        instructorLabel.setFont(bodyFont);
         roomLabel = new JLabel(classRoom);
-            roomLabel.setFont(bodyFont);
+        roomLabel.setFont(bodyFont);
         lectureOrDiscLabel = new JLabel(String.format("%b", classLecture));
-            lectureOrDiscLabel.setFont(bodyFont);
+        lectureOrDiscLabel.setFont(bodyFont);
         daysLabel = new JLabel(classDays);
-            daysLabel.setFont(bodyFont);
+        daysLabel.setFont(bodyFont);
 
         removeButton = new JButton("Remove");
-            removeButton.setFont(bodyFont);
-            removeButton.setBackground(Color.WHITE);
+        removeButton.setFont(bodyFont);
+        removeButton.setBackground(Color.WHITE);
 
         emptyLabel = new JLabel("");
 
         setLayout(new GridLayout(0,2,0,0));
 
         panel0 = new JPanel();
-            panel0.setLayout(new GridLayout(2, 1));
-                panel0A = new JPanel();
-                    panel0A.add(classNameLabel);
-                panel0.add(panel0A);
-                panel0B = new JPanel();
-                    panel0B.add(timeLabel);
-                panel0.add(panel0B);
+        panel0.setLayout(new GridLayout(2, 1));
+        panel0A = new JPanel();
+        panel0A.add(classNameLabel);
+        panel0.add(panel0A);
+        panel0B = new JPanel();
+        panel0B.add(timeLabel);
+        panel0.add(panel0B);
 
         panel1 = new JPanel();
-            panel1.setLayout(new GridLayout(2,1,20,0));
-                panel1A = new JPanel();
-                    panel1A.add(lectureOrDiscLabel);
-            panel1.add(panel1A);
-                panel1B = new JPanel();
-                    panel1B.add(daysLabel);
-            panel1.add(panel1B);
+        panel1.setLayout(new GridLayout(2,1,20,0));
+        panel1A = new JPanel();
+        panel1A.add(lectureOrDiscLabel);
+        panel1.add(panel1A);
+        panel1B = new JPanel();
+        panel1B.add(daysLabel);
+        panel1.add(panel1B);
 
 
 
         panel2 = new JPanel();
-            panel2.setLayout(new GridLayout(3,1,0,0));
-            panel2A = new JPanel();
-                panel2A.add(roomLabel);
-            panel2.add(panel2A);
-            panel2B = new JPanel();
-                panel2B.add(instructorLabel);
-            panel2.add(panel2B);
+        panel2.setLayout(new GridLayout(3,1,0,0));
+        panel2A = new JPanel();
+        panel2A.add(roomLabel);
+        panel2.add(panel2A);
+        panel2B = new JPanel();
+        panel2B.add(instructorLabel);
+        panel2.add(panel2B);
 
         panel3 = new JPanel();
-            panel3.add(removeButton);
+        panel3.add(removeButton);
 
         add(panel0);
         add(panel1);
         add(panel2);
         add(panel3);
-
-
-
-
-
     }
 }
