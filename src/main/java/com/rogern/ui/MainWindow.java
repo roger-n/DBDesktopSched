@@ -15,6 +15,7 @@ public class MainWindow extends JFrame {
             JButton scheduleButton;
             JButton currentButton;
     JPanel top_level_panel;
+        SchedPanel schedPanel;
 
     //DECLARING DBCONTROLLER
 
@@ -80,8 +81,10 @@ public class MainWindow extends JFrame {
                 header.add(headerButtonsPanel);
             add(header, BorderLayout.NORTH);
 
+        //Main activity panel
         top_level_panel = new JPanel();
             top_level_panel.setLayout(new GridLayout(1,1));
+            add(top_level_panel);
 
             //Set default view to mySchedules
             switchToSchedule();
@@ -95,6 +98,8 @@ public class MainWindow extends JFrame {
 
     public void switchToSchedule(){
         top_level_panel.removeAll();
+        schedPanel = new SchedPanel(controller);
+        top_level_panel.add(schedPanel);
         //TODO: create and set up todayPanel
         refreshComponent(top_level_panel);
     }
