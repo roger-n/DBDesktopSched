@@ -86,6 +86,7 @@ public class Test extends JFrame {
         add(top_level_panel);
         //Set default view to mySchedules
         //switchToSchedule();
+        switchToNewClassPanel();
         refreshComponent(this);
 
         setVisible(true);
@@ -94,16 +95,11 @@ public class Test extends JFrame {
 
     //ALTERNATING BETWEEN DIFFERENT ACTIVITIES
 
-    public void switchToSchedule(){
-        top_level_panel.add(schedPanel);
+    public void switchToNewClassPanel(){
+        top_level_panel.add(new NewClassPanel());
         refreshComponent(top_level_panel);
     }
 
-    public void switchToCurrent(){
-        top_level_panel.removeAll();
-        //TODO: make new currentPanel and set it up
-        refreshComponent(top_level_panel);
-    }
     //----------------------------------------
 
     //UPDATE ANY CONTAINER
