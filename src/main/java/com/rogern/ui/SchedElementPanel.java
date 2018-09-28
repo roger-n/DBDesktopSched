@@ -23,18 +23,24 @@ public class SchedElementPanel extends JPanel{
 
     //See GUI.png for details
     //NOTE: GridLayout adds Left>Right, Top>Bottom s
+
     JPanel panel0;
+        //For className label
         JPanel panel0A;
+        //For classTime label
         JPanel panel0B;
     JPanel panel1;
+        //For classRoom label
         JPanel panel1A;
+        //For classInstructor label
         JPanel panel1B;
     JPanel panel2;
+        //For classLecture label
         JPanel panel2A;
+        //For classDays label
         JPanel panel2B;
+    //For removeButton button
     JPanel panel3;
-        JPanel panel3A;
-        JPanel panel3B;
 
     //Fonts for JLabels
     Font headFont = new Font("Trebuchet MS", Font.PLAIN, 20);
@@ -50,6 +56,7 @@ public class SchedElementPanel extends JPanel{
     String classDays;
     String classInstructor;
     String classRoom;
+
     boolean classLecture;
 
     public SchedElementPanel(ScheduleEvent e){
@@ -62,6 +69,8 @@ public class SchedElementPanel extends JPanel{
     }
 
     public void setupSchedElementPanel() {
+
+        //Set all variables
         className = scheduleEvent.getClassName();
         classStartTime = scheduleEvent.getClassStartTime();
         classEndTime = scheduleEvent.getClassEndTime();
@@ -79,15 +88,19 @@ public class SchedElementPanel extends JPanel{
         //Create and set fonts for JLabels
         classNameLabel = new JLabel(className);
         classNameLabel.setFont(headFont);
+
         timeLabel = new JLabel("" + classStartTime.truncatedTo(ChronoUnit.MINUTES) + " - " + classEndTime.truncatedTo(ChronoUnit.MINUTES));
         timeLabel.setFont(bodyFont);
 
         instructorLabel = new JLabel(classInstructor);
         instructorLabel.setFont(bodyFont);
+
         roomLabel = new JLabel(classRoom);
         roomLabel.setFont(bodyFont);
-        lectureOrDiscLabel = new JLabel(String.format("%b", classLecture));
+
+        lectureOrDiscLabel = new JLabel((classLecture)? "Lecture" : "Recitation");
         lectureOrDiscLabel.setFont(bodyFont);
+
         daysLabel = new JLabel(classDays);
         daysLabel.setFont(bodyFont);
 
@@ -96,6 +109,9 @@ public class SchedElementPanel extends JPanel{
         removeButton.setBackground(Color.WHITE);
 
         emptyLabel = new JLabel("");
+
+
+        //Setting up nested JPanels with GridLayouts, adding components and adding panels
 
         setLayout(new GridLayout(0,2,0,0));
 
@@ -117,8 +133,6 @@ public class SchedElementPanel extends JPanel{
         panel1B.add(daysLabel);
         panel1.add(panel1B);
 
-
-
         panel2 = new JPanel();
         panel2.setLayout(new GridLayout(3,1,0,0));
         panel2A = new JPanel();
@@ -136,4 +150,5 @@ public class SchedElementPanel extends JPanel{
         add(panel2);
         add(panel3);
     }
+
 }

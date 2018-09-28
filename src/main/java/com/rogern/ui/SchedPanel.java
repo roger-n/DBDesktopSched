@@ -15,7 +15,6 @@ public class SchedPanel extends JPanel {
     JPanel buttonPanel;
     JPanel schedulePan;
     JButton addClass;
-    List<SchedElementPanel> allSchedPanels;
 
     public SchedPanel(DBController controller){
 
@@ -29,30 +28,53 @@ public class SchedPanel extends JPanel {
     }
 
     public void setupSchedPanel() {
+
+        //SETUP JSCROLLPANE
         thisSchedScrollPane = new JScrollPane();
         thisSchedScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         thisSchedScrollPane.getVerticalScrollBar().setUnitIncrement(16);
 
+        //BASE PANEL TO PUT IN JSCROLLPANE
         schedulePan = new JPanel();
         schedulePan.setLayout(new BoxLayout(schedulePan, BoxLayout.Y_AXIS));
 
+        //ADDCLASS BUTTON SETUP
         addClass = new JButton("(+) Add Class");
         addClass.setFont(new Font("Trebuchet MS",Font.PLAIN,16));
+        addClass.setBackground(Color.BLUE);
+        addClass.setOpaque(true);
 
+        //ADD ALL EVENTS TO JPANEL
         scheduleEvents = controller.getScheduleEvents();
         for(int i = 0; i< scheduleEvents.size(); i++){
             schedulePan.add(new SchedElementPanel((ScheduleEvent) scheduleEvents.get(i)));
         }
 
+        //ADD BUTTON TO JPANEL
         buttonPanel = new JPanel();
         buttonPanel.setLayout(new BorderLayout());
         buttonPanel.add(addClass, BorderLayout.CENTER);
 
+        //ADD BOTH JPANELS TO JSCROLLPANE
         schedulePan.add(buttonPanel);
 
         thisSchedScrollPane.getViewport().setView(schedulePan);
 
         add(thisSchedScrollPane, BorderLayout.CENTER);
+    }
+
+    public SchedPanel update() {
+        //START BY CLEARING PANEL
+        removeAll();
+        setupSchedPanel();
+        return this;
+    }
+
+    public void switchToNewClassPanel() {
+        this.removeAll();
+        NewClassPanel newClassPanel = new NewClassPanel();
+        this.add(newClassPanel);
+        MainWindow.refreshComponent(this);
     }
 
     //TODO write these methods and implement them with SchedPanelEvent and SchedElementPanel
@@ -63,5 +85,7 @@ public class SchedPanel extends JPanel {
     public void deleteSchedElementPanel(int id) {
 
     }
+
+
 
 }

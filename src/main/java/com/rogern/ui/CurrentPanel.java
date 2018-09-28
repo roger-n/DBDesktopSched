@@ -8,12 +8,12 @@ import java.awt.*;
 
 //TODO Make this class a separate thread that constantly checks if current event is different and updates it
 
-public class CurrentListPanel extends JPanel {
+public class CurrentPanel extends JPanel {
 
     ScheduleEvent currentEvent;
     DBController controller;
 
-    public CurrentListPanel(DBController controller) {
+    public CurrentPanel(DBController controller) {
         this.controller = controller;
     }
 
