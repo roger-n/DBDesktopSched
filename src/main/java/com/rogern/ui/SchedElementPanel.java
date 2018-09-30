@@ -9,6 +9,12 @@ import java.time.temporal.ChronoUnit;
 
 public class SchedElementPanel extends JPanel{
 
+    //SCHEDPANEL UNDERNEATH
+    SchedPanel schedPanel;
+
+    //Declare list of ScheduleEvents
+    ScheduleEvent scheduleEvent;
+
     //Declare UI components
     JLabel classNameLabel;
     JLabel timeLabel;
@@ -46,9 +52,6 @@ public class SchedElementPanel extends JPanel{
     Font headFont = new Font("Trebuchet MS", Font.PLAIN, 20);
     Font bodyFont = new Font("Trebuchet MS", Font.PLAIN, 14);
 
-    //Declare list of ScheduleEvents
-    ScheduleEvent scheduleEvent;
-
     //Declare ScheduleEvent variables
     String className;
     LocalTime classStartTime;
@@ -59,16 +62,19 @@ public class SchedElementPanel extends JPanel{
 
     boolean classLecture;
 
-    public SchedElementPanel(ScheduleEvent e){
+    public SchedElementPanel(ScheduleEvent e, SchedPanel schedPanel){
 
-        //Get list of all ScheduleEvents
         scheduleEvent = e;
+        this.schedPanel = schedPanel;
 
         setupSchedElementPanel();
 
     }
 
     public void setupSchedElementPanel() {
+
+        //SETUP LISTENERS
+        SchedElementEvent schedElementEvent = new SchedElementEvent(schedPanel,this);
 
         //Set all variables
         className = scheduleEvent.getClassName();
@@ -105,6 +111,8 @@ public class SchedElementPanel extends JPanel{
         daysLabel.setFont(bodyFont);
 
         removeButton = new JButton("Remove");
+        //ADD LISTENER TO REMOVEBUTTON
+        removeButton.addActionListener(schedElementEvent);
         removeButton.setFont(bodyFont);
         removeButton.setBackground(Color.WHITE);
 
@@ -149,6 +157,10 @@ public class SchedElementPanel extends JPanel{
         add(panel1);
         add(panel2);
         add(panel3);
+    }
+
+    public int getID() {
+        return scheduleEvent.getClassID();
     }
 
 }

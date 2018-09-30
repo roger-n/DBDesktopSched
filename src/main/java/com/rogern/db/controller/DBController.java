@@ -45,6 +45,9 @@ public class DBController {
     }
 
     public void deleteScheduleEvent(Integer id) {
+        if (!session.getTransaction().isActive()) {
+            session.beginTransaction();
+        }
         ScheduleEvent e = session.find(ScheduleEvent.class, id);
         session.delete(e);
         commit();
@@ -55,6 +58,9 @@ public class DBController {
     }
 
     public void saveScheduleEvent(ScheduleEvent scheduleEvent){
+        if (!session.getTransaction().isActive()) {
+            session.beginTransaction();
+        }
         session.save(scheduleEvent);
         commit();
     }

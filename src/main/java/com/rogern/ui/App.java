@@ -37,6 +37,11 @@ public class App {
         results.forEach(System.out::println);
 
         System.out.println();
+
+        controller.deleteScheduleEvent(173);
+        controller.deleteScheduleEvent(205);
+        //controller.deleteScheduleEvent(139);
+
         controller.listScheduleEvents();
 //        ScheduleEvent scheduleEvent = session.find(ScheduleEvent.class, 1);
 //        System.out.println(scheduleEvent);

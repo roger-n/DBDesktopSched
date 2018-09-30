@@ -29,6 +29,9 @@ public class SchedPanel extends JPanel {
 
     public void setupSchedPanel() {
 
+        //SETUP LISTENERS
+        SchedPanelEvent schedListener = new SchedPanelEvent(this);
+
         //SETUP JSCROLLPANE
         thisSchedScrollPane = new JScrollPane();
         thisSchedScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
@@ -40,6 +43,8 @@ public class SchedPanel extends JPanel {
 
         //ADDCLASS BUTTON SETUP
         addClass = new JButton("(+) Add Class");
+        //ADD LISTENER TO BUTTON
+        addClass.addActionListener(schedListener);
         addClass.setFont(new Font("Trebuchet MS",Font.PLAIN,16));
         addClass.setBackground(Color.BLUE);
         addClass.setOpaque(true);
@@ -47,7 +52,7 @@ public class SchedPanel extends JPanel {
         //ADD ALL EVENTS TO JPANEL
         scheduleEvents = controller.getScheduleEvents();
         for(int i = 0; i< scheduleEvents.size(); i++){
-            schedulePan.add(new SchedElementPanel((ScheduleEvent) scheduleEvents.get(i)));
+            schedulePan.add(new SchedElementPanel((ScheduleEvent) scheduleEvents.get(i), this));
         }
 
         //ADD BUTTON TO JPANEL
@@ -67,6 +72,7 @@ public class SchedPanel extends JPanel {
         //START BY CLEARING PANEL
         removeAll();
         setupSchedPanel();
+        MainWindow.refreshComponent(this);
         return this;
     }
 
@@ -83,7 +89,13 @@ public class SchedPanel extends JPanel {
     }
 
     public void deleteSchedElementPanel(int id) {
+        controller.deleteScheduleEvent(id);
+        this.update();
+    }
 
+    //GET DB CONTROLLER
+    public DBController getController() {
+        return controller;
     }
 
 
