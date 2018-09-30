@@ -124,8 +124,147 @@ public class NewClassPanel extends JPanel {
         }
     }
 
+    //Getting values from NewClassPanel---------------------------------------
+
     public void setErrorLabelText(String errorLabelText) {
         this.errorLabel.setText("Error: " + errorLabelText);
     }
 
+    public String getClassName() {
+        return nameField.getText();
+    }
+
+    public LocalTime getClassStartTime() {
+        return LocalTime.parse(startTimeField.getText());
+    }
+
+    public LocalTime getClassEndTime() {
+        return LocalTime.parse(endTimeField.getText());
+    }
+
+    public String getClassDays() {
+        String days = "";
+        if (daysCheckBoxes[0].isSelected()) {
+            days += "M";
+        }
+        if (daysCheckBoxes[1].isSelected()) {
+            days += "T";
+        }
+        if (daysCheckBoxes[2].isSelected()) {
+            days += "W";
+        }
+        if (daysCheckBoxes[3].isSelected()) {
+            days += "R";
+        }
+        if (daysCheckBoxes[4].isSelected()) {
+            days += "F";
+        }
+        return days;
+    }
+
+    public String getClassInstructor() {
+        return classInstructorField.getText();
+    }
+
+    public String getClassRoom() {
+        return classRoomField.getText();
+    }
+
+    public boolean getClassLecture() {
+        return lectureComboBox.getSelectedItem().toString().equals("Lecture");
+    }
+
+    //Checking validity of NewClassPanel arguments---------------------------------
+
+    public boolean verifyClassName() {
+        if (nameField.getText().equals("") || nameField.getText().equals(null)) {
+            setErrorLabelText("Please enter a class name");
+            MainWindow.refreshComponent(errorLabel);
+            return false;
+        }
+        return true;
+    }
+
+    public boolean verifyClassTime() {
+        //String array of both times
+        String timeTexts[] = {startTimeField.getText(), endTimeField.getText()};
+        String incorrectTimeFormat = "Please enter both times in HH:MM format";
+        String invalidTime = "Please enter valid times from 00:00 to 23:59";
+
+        //Test all for both times
+        for (int i = 0; i < timeTexts.length; i++) {
+            //Verify not empty
+            if (timeTexts[i].equals("")) {
+                setErrorLabelText(incorrectTimeFormat);
+                MainWindow.refreshComponent(errorLabel);
+                return false;
+            }
+            //Verify correct length and colon placement
+            if (timeTexts[i].length() != 5 || timeTexts[i].charAt(2) != ':') {
+                setErrorLabelText(incorrectTimeFormat);
+                MainWindow.refreshComponent(errorLabel);
+                return false;
+            }
+            //Verify all numeric
+            if (!Character.isDigit(timeTexts[i].charAt(0)) ||
+                    !Character.isDigit(timeTexts[i].charAt(1)) ||
+                    !Character.isDigit(timeTexts[i].charAt(3)) ||
+                    !Character.isDigit(timeTexts[i].charAt(4))) {
+                setErrorLabelText(incorrectTimeFormat);
+                MainWindow.refreshComponent(errorLabel);
+                return false;
+            }
+            //Verify correct number ranges
+            if (Integer.parseInt(timeTexts[i].substring(0, 2)) < 0 ||
+                    Integer.parseInt(timeTexts[i].substring(0, 2)) > 23 ||
+                    Integer.parseInt(timeTexts[i].substring(3, 5)) < 0 ||
+                    Integer.parseInt(timeTexts[i].substring(3, 5)) > 59) {
+                setErrorLabelText(invalidTime);
+                MainWindow.refreshComponent(errorLabel);
+                return false;
+            }
+
+            //Verify endTime is after startTime
+            if (getClassEndTime().isBefore(getClassStartTime())) {
+                setErrorLabelText("Please ensure end time is after start time");
+                MainWindow.refreshComponent(errorLabel);
+                return false;
+            }
+        }
+        //Valid time if both times pass all tests
+        return true;
+    }
+
+    public boolean verifyClassDays() {
+        //Cycle through, if any box is checked, it's valid
+        for (int i = 0; i < 5; i++) {
+            if (daysCheckBoxes[i].isSelected()) {
+                return true;
+            }
+        }
+        //No checked boxes, invalid
+        setErrorLabelText("Please select at least one day");
+        MainWindow.refreshComponent(errorLabel);
+        return false;
+    }
+
+    public boolean verifyClassInstructor() {
+        //Verify not empty
+        if (classInstructorField.getText().equals("")) {
+            setErrorLabelText("Please enter an instructor name");
+            MainWindow.refreshComponent(errorLabel);
+            return false;
+        }
+        return true;
+    }
+
+    public boolean verifyClassRoom() {
+        //Verify not empty
+        if (classRoomField.getText().equals("")) {
+            setErrorLabelText("Please enter a class room");
+            MainWindow.refreshComponent(errorLabel);
+            return false;
+        }
+        return true;
+    }
 }

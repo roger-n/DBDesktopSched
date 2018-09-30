@@ -86,7 +86,7 @@ public class SchedElementPanel extends JPanel{
         classLecture = scheduleEvent.getClassLecture();
 
         //Set max size of panel
-        setMaximumSize(new Dimension(420,120));
+        setMaximumSize(new Dimension(420,150));
 
         //Set border using BorderFactory
         setBorder(BorderFactory.createLoweredBevelBorder());

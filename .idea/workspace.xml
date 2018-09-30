@@ -5,9 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanelEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanelEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogern/ui/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogern/ui/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rogern/ui/SchedPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogern/ui/SchedPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedElementPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedElementPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rogern/ui/NewClassPanelEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rogern/ui/NewClassPanelEvent.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,14 +18,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4907033">
+    <splitter split-orientation="horizontal" split-proportion="0.7784964">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="SchedPanel.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="85" selection-start-line="85" selection-end-line="85" />
+                <state>
+                  <caret line="75" column="18" lean-forward="true" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -49,23 +48,10 @@
           <file leaf-file-name="SchedElementPanel.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedElementPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="154" selection-start-line="154" selection-end-line="154" />
+                <state relative-caret-position="93">
+                  <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="NewClassPanelEvent.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanelEvent.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-                  <folding>
-                    <element signature="e#242#243#0" expanded="true" />
-                    <element signature="e#291#292#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -74,12 +60,36 @@
           <file leaf-file-name="NewClassPanel.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="359">
-                  <caret line="108" column="30" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
+                <state relative-caret-position="221">
+                  <caret line="226" column="42" selection-start-line="226" selection-start-column="42" selection-end-line="226" selection-end-column="42" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#4538#4539#0" expanded="true" />
                     <element signature="e#4568#4569#0" expanded="true" />
+                    <element signature="e#4637#4638#0" expanded="true" />
+                    <element signature="e#4668#4669#0" expanded="true" />
+                    <element signature="e#4753#4754#0" expanded="true" />
+                    <element signature="e#4816#4817#0" expanded="true" />
+                    <element signature="e#4858#4859#0" expanded="true" />
+                    <element signature="e#4889#4890#0" expanded="true" />
+                    <element signature="e#5460#5461#0" expanded="true" />
+                    <element signature="e#5512#5513#0" expanded="true" />
+                    <element signature="e#5553#5554#0" expanded="true" />
+                    <element signature="e#5600#5601#0" expanded="true" />
+                    <element signature="e#5631#5632#0" expanded="true" />
+                    <element signature="e#5716#5717#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="NewClassPanelEvent.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanelEvent.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="212">
+                  <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -113,7 +123,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/Test.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="238">
@@ -125,10 +135,22 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="ScheduleEvent.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/db/model/ScheduleEvent.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17">
+                  <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="DBController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/db/controller/DBController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="237">
+                <state relative-caret-position="492">
                   <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -156,6 +178,8 @@
     <findStrings>
       <find>font</find>
       <find>Font</find>
+      <find>startTimeText</find>
+      <find>schedpanel</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -178,14 +202,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/rogern/ui/MainWindowEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedPanelEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rogern/ui/MainWindow.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedElementPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedElementEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rogern/ui/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rogern/db/controller/DBController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanelEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rogern/ui/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanelEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedElementPanel.java" />
       </list>
     </option>
   </component>
@@ -497,17 +521,17 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32965517" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.16137931" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22344828" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19466145" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19466145" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2943677" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.51724136" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -549,7 +573,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="18" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -619,6 +643,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1394">
           <caret line="121" column="16" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -824,51 +851,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/db/model/ScheduleEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedElementEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/db/controller/DBController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#754#755#0" expanded="true" />
-            <element signature="e#834#835#0" expanded="true" />
-            <element signature="e#1882#1883#0" expanded="true" />
-            <element signature="e#1951#1952#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -885,29 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="108" column="30" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4538#4539#0" expanded="true" />
-            <element signature="e#4568#4569#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanelEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -918,10 +881,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/db/controller/DBController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
+            <element signature="e#1882#1883#0" expanded="true" />
+            <element signature="e#1951#1952#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/db/model/ScheduleEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedElementEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanelEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="226" column="42" selection-start-line="226" selection-start-column="42" selection-end-line="226" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4538#4539#0" expanded="true" />
+            <element signature="e#4568#4569#0" expanded="true" />
+            <element signature="e#4637#4638#0" expanded="true" />
+            <element signature="e#4668#4669#0" expanded="true" />
+            <element signature="e#4753#4754#0" expanded="true" />
+            <element signature="e#4816#4817#0" expanded="true" />
+            <element signature="e#4858#4859#0" expanded="true" />
+            <element signature="e#4889#4890#0" expanded="true" />
+            <element signature="e#5460#5461#0" expanded="true" />
+            <element signature="e#5512#5513#0" expanded="true" />
+            <element signature="e#5553#5554#0" expanded="true" />
+            <element signature="e#5600#5601#0" expanded="true" />
+            <element signature="e#5631#5632#0" expanded="true" />
+            <element signature="e#5716#5717#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="75" column="18" lean-forward="true" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedElementPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="154" selection-start-line="154" selection-end-line="154" />
+        <state relative-caret-position="93">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
