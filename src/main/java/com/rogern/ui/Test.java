@@ -96,7 +96,7 @@ public class Test extends JFrame {
     //ALTERNATING BETWEEN DIFFERENT ACTIVITIES
 
     public void switchToNewClassPanel(){
-        top_level_panel.add(new NewClassPanel());
+        top_level_panel.add(new NewClassPanel(schedPanel));
         refreshComponent(top_level_panel);
     }
 

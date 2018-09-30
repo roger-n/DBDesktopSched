@@ -11,6 +11,9 @@ import java.time.temporal.ChronoUnit;
 
 public class NewClassPanel extends JPanel {
 
+    //Parent SchedPanel
+    SchedPanel schedPanel;
+
     //Initialize components for labels and user input
     JPanel[] newClassPanels;
 
@@ -33,14 +36,18 @@ public class NewClassPanel extends JPanel {
     //Some padding components
     final Component buttonHorizontalPadding = Box.createRigidArea(new Dimension(1,10));
 
-    public NewClassPanel() {
+    public NewClassPanel(SchedPanel schedPanel) {
 
+        this.schedPanel =schedPanel;
         //Setup NewClassPanel
         setupNewClassPanel();
 
     }
 
     public void setupNewClassPanel() {
+
+        //Create NewClassPanelEvent
+        NewClassPanelEvent newClassPanelEvent = new NewClassPanelEvent(this);
 
         //Initialize array of panels
         newClassPanels = new JPanel[10];
@@ -95,8 +102,12 @@ public class NewClassPanel extends JPanel {
         buttonsPanel = new JPanel();
         confirmButton = new JButton("Confirm");
             confirmButton.setFont(componentFont);
+            //Add listener to confirmButton
+            confirmButton.addActionListener(newClassPanelEvent);
         cancelButton = new JButton("Cancel");
             cancelButton.setFont(componentFont);
+            //Add listener to cancelButton
+            cancelButton.addActionListener(newClassPanelEvent);
         buttonsPanel.setLayout(new GridLayout(1,2));
         buttonsPanel.add(buttonHorizontalPadding);
         buttonsPanel.add(confirmButton);
@@ -111,7 +122,10 @@ public class NewClassPanel extends JPanel {
         for (int i = 0; i < 10; i++) {
             add(newClassPanels[i]);
         }
+    }
 
+    public void setErrorLabelText(String errorLabelText) {
+        this.errorLabel.setText("Error: " + errorLabelText);
     }
 
 }

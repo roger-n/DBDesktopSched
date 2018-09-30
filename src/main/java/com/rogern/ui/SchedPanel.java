@@ -59,6 +59,7 @@ public class SchedPanel extends JPanel {
         buttonPanel = new JPanel();
         buttonPanel.setLayout(new BorderLayout());
         buttonPanel.add(addClass, BorderLayout.CENTER);
+        buttonPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 40));
 
         //ADD BOTH JPANELS TO JSCROLLPANE
         schedulePan.add(buttonPanel);
@@ -78,7 +79,7 @@ public class SchedPanel extends JPanel {
 
     public void switchToNewClassPanel() {
         this.removeAll();
-        NewClassPanel newClassPanel = new NewClassPanel();
+        NewClassPanel newClassPanel = new NewClassPanel(this);
         this.add(newClassPanel);
         MainWindow.refreshComponent(this);
     }
