@@ -84,11 +84,6 @@ public class SchedPanel extends JPanel {
         MainWindow.refreshComponent(this);
     }
 
-    //TODO write these methods and implement them with SchedPanelEvent and SchedElementPanel
-    public void addSchedElementPanel(SchedElementPanel schedElementPanel) {
-
-    }
-
     public void deleteSchedElementPanel(int id) {
         controller.deleteScheduleEvent(id);
         this.update();

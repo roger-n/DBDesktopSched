@@ -39,9 +39,6 @@ public class NewClassPanelEvent implements ActionListener {
                                 //Add ScheduledEvent to DB
                                 schedPanel.controller.saveScheduleEvent(newScheduleEvent);
 
-                                //Add ScheduleEventPanel
-                                schedPanel.addSchedElementPanel(new SchedElementPanel(newScheduleEvent, newClassPanel.schedPanel));
-
                                 //Update SchedPanel
                                 schedPanel.update();
                             }
