@@ -1,4 +1,5 @@
 # DBDesktopSched
+<p> Author: Roger Nhan</p>
 <p> Graphical User Interface implementing Hibernate ORM to map object oriented models to a database </p>
 <p> User can add classes to their schedule and classes are committed to the database </p>
 <p> Automatically sorts and updates class schedule based on start time using insertion sort </p>
