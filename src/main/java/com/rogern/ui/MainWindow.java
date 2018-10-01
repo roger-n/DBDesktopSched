@@ -97,31 +97,6 @@ public class MainWindow extends JFrame {
     }
     //--------------------------------
 
-    //ALTERNATING BETWEEN DIFFERENT ACTIVITIES
-    /*
-    public void switchTo(JPanel backPanel, JPanel topPanel) {
-        //CLEAR BOTTOMPANEL AND UPDATE WITH TOPPANEL,
-        backPanel.removeAll();
-        refreshComponent(backPanel);
-
-        //TRY TO CAST TO SCHEDPANEL OR CURRENTPANEL
-        try{
-            SchedPanel topPanelCast = (SchedPanel) topPanel;
-            topPanelCast.update();
-        } catch (Exception e) {
-            try {
-                CurrentPanel topPanelCast = (CurrentPanel) topPanel;
-                //topPanelCast.update();
-            } catch (Exception e2) {
-                throw new RuntimeException("Incorrect Usage.  Use: switchto(jpanel, schedpanel/currentpanel)");
-            }
-        }
-
-        backPanel.add(topPanel);
-        refreshComponent(backPanel);
-    }
-    */
-
     //CURRENT METHOD OF ALTERNATING BETWEEN DIFFERENT ACTIVITIES
     public void switchToSchedule(){
         //CLEAR TOP_LEVEL_PANEL AND UPDATE WITH SCHEDPANEL,
