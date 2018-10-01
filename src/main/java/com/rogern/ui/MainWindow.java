@@ -5,6 +5,8 @@ import com.rogern.db.controller.DBController;
 import javax.swing.*;
 import java.awt.*;
 
+import java.net.URL;
+
 public class MainWindow extends JFrame {
 
     //DECLARING ALL MAIN CONTAINER ELEMENTS
@@ -129,10 +131,13 @@ public class MainWindow extends JFrame {
         refreshComponent(top_level_panel);
     }
 
+    //LINK TO REDDIT
     public void switchToCurrent(){
-        top_level_panel.removeAll();
-        //TOD0: make new currentPanel and set it up
-        refreshComponent(top_level_panel);
+        try {
+            Desktop.getDesktop().browse(new URL("https://www.reddit.com/r/news").toURI());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     //----------------------------------------
