@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d32f0cee-382d-4e4e-8082-fe66abaf2774" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rogern/ui/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogern/ui/MainWindow.java" afterDir="false" />
-    </list>
+    <list default="true" id="d32f0cee-382d-4e4e-8082-fe66abaf2774" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,7 +69,7 @@
             <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanelEvent.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="570">
-                  <caret line="38" column="58" lean-forward="true" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
+                  <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -107,8 +105,8 @@
           <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/MainWindow.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="274">
-                  <caret line="97" column="38" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
+                <state relative-caret-position="59">
+                  <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -980,7 +978,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/NewClassPanelEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
-          <caret line="38" column="58" lean-forward="true" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
+          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -989,8 +987,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="97" column="38" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
+        <state relative-caret-position="59">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
