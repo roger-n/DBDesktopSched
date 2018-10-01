@@ -6,7 +6,7 @@ import com.rogern.db.model.ScheduleEvent;
 import java.time.LocalTime;
 import java.util.List;
 
-public class App {
+public class DBControllerTesting {
     public static void main(String[] args) {
         DBController controller = new DBController();
 
