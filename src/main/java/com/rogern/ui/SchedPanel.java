@@ -6,6 +6,7 @@ import com.rogern.db.model.ScheduleEvent;
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
+import java.util.ArrayList;
 
 public class SchedPanel extends JPanel {
 
@@ -49,8 +50,8 @@ public class SchedPanel extends JPanel {
         addClass.setBackground(Color.BLUE);
         addClass.setOpaque(true);
 
-        //ADD ALL EVENTS TO JPANEL
-        scheduleEvents = controller.getScheduleEvents();
+        //ADD ALL EVENTS TO JPANEL AFTER ORDERING THEM
+        scheduleEvents = orderSdcheduleEvents(controller.getScheduleEvents());
         for(int i = 0; i< scheduleEvents.size(); i++){
             schedulePan.add(new SchedElementPanel((ScheduleEvent) scheduleEvents.get(i), this));
         }
@@ -69,6 +70,28 @@ public class SchedPanel extends JPanel {
         add(thisSchedScrollPane, BorderLayout.CENTER);
     }
 
+    //SORT EVENTS BY START TIME USING INSERTION SORT
+    public List<?> orderSdcheduleEvents(List<?> scheduleEvents) {
+        ArrayList<ScheduleEvent> sortedEvents = new ArrayList<ScheduleEvent>();
+        if (scheduleEvents.size() <= 1) {
+            return scheduleEvents;
+        }
+        sortedEvents.add((ScheduleEvent) scheduleEvents.get(0));
+        for(int i = 1; i < scheduleEvents.size(); i++) {
+            for (int j = 0; j <= sortedEvents.size(); j++) {
+                if (j == sortedEvents.size()) {
+                    sortedEvents.add((ScheduleEvent) scheduleEvents.get(i));
+                    break;
+                } else if (!((ScheduleEvent) scheduleEvents.get(i)).getClassStartTime().isAfter(sortedEvents.get(j).getClassStartTime())) {
+                    sortedEvents.add(j, (ScheduleEvent) scheduleEvents.get(i));
+                    break;
+                }
+            }
+        }
+//        return sortedEvents;
+        return sortedEvents;
+    }
+
     public SchedPanel update() {
         //START BY CLEARING PANEL
         removeAll();
@@ -77,6 +100,7 @@ public class SchedPanel extends JPanel {
         return this;
     }
 
+    //SWITCH TO NEW CLASS PANEL
     public void switchToNewClassPanel() {
         this.removeAll();
         NewClassPanel newClassPanel = new NewClassPanel(this);
@@ -84,6 +108,7 @@ public class SchedPanel extends JPanel {
         MainWindow.refreshComponent(this);
     }
 
+    //DELETE SCHEDELEMENTPANEL
     public void deleteSchedElementPanel(int id) {
         controller.deleteScheduleEvent(id);
         this.update();
