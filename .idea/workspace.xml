@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d32f0cee-382d-4e4e-8082-fe66abaf2774" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Test2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/rogern/ui/CurrentPanel.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,8 +25,8 @@
           <file leaf-file-name="SchedPanel.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="215">
-                  <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+                <state relative-caret-position="480">
+                  <caret line="90" selection-start-line="90" selection-end-line="90" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#2382#2397#0" expanded="true" />
@@ -141,7 +138,7 @@
           <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/Test.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="138">
+                <state relative-caret-position="233">
                   <caret line="98" column="56" selection-start-line="98" selection-start-column="56" selection-end-line="98" selection-end-column="56" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -546,12 +543,12 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32965517" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.50903296" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23485653" />
       <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15572916" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13854167" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32731137" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -983,7 +980,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
+        <state relative-caret-position="233">
           <caret line="98" column="56" selection-start-line="98" selection-start-column="56" selection-end-line="98" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -993,8 +990,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rogern/ui/SchedPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="480">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2382#2397#0" expanded="true" />

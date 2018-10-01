@@ -88,7 +88,6 @@ public class SchedPanel extends JPanel {
                 }
             }
         }
-//        return sortedEvents;
         return sortedEvents;
     }
 
