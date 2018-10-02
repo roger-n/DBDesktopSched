@@ -5,10 +5,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import java.io.Serializable;
 import java.time.LocalTime;
 
 @Entity
-public class ScheduleEvent {
+public class ScheduleEvent implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int classID;
